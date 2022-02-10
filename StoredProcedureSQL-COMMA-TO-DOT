@@ -1,0 +1,6 @@
+CREATE PROCEDURE [dolar_guilherme_stevanatto].[conversor_guilherme_stevanatto]
+AS
+INSERT INTO [dbo].[dolar_final_guilherme_stevanatto]
+select REPLACE(cotacaoCompra, ',','.'), REPLACE(cotacaoVenda, ',', '.'),
+dataHoraCotacao
+from [dbo].[dolar_stage_guilherme_stevanatto]
